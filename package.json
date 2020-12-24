@@ -1,6 +1,6 @@
 {
   "name": "uland-ssr",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Same uland API for SSR / DOM-less environments",
   "main": "./cjs/index.js",
   "scripts": {
@@ -8,7 +8,11 @@
     "cjs": "ascjs esm cjs",
     "test": "node test/index.js"
   },
-  "keywords": ["uland", "ssr", "hooks"],
+  "keywords": [
+    "uland",
+    "ssr",
+    "hooks"
+  ],
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
