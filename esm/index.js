@@ -1,5 +1,7 @@
+import {hooked} from 'uhooks-nofx';
+
 export function Component(f) {
-  return f;
+  return hooked(f);
 };
 
 export {render, html, svg} from 'uhtml-ssr';

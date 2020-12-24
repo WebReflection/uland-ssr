@@ -1,6 +1,8 @@
 'use strict';
+const {hooked} = require('uhooks-nofx');
+
 function Component(f) {
-  return f;
+  return hooked(f);
 }
 exports.Component = Component;
 
