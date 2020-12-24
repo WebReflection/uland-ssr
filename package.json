@@ -28,7 +28,7 @@
     "./package.json": "./package.json"
   },
   "dependencies": {
-    "uhooks-nofx": "^0.1.0",
+    "uhooks-nofx": "^0.1.1",
     "uhtml-ssr": "^0.1.0"
   },
   "repository": {
