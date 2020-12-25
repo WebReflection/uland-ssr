@@ -4,7 +4,7 @@
 
 <sup>**Social Media Photo by [Ben Klea](https://unsplash.com/@benkleaphoto) on [Unsplash](https://unsplash.com/)**</sup>
 
-*micro* land SSR, is [µland](https://github.com/WebReflection/uhtml#readme) API for SSR / DOM-less environments.
+*micro* land SSR, is [µland](https://github.com/WebReflection/uland#readme) API for SSR / DOM-less environments.
 
 It allows using same components code on the client and the server, producing *html* or *svg* streams.
 
