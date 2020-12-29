@@ -14,7 +14,4 @@ const AsyncList = Component(async items => {
   `;
 });
 
-(async () => {
-  const items = [1, 2, 3];
-  console.log(await render(String, AsyncList(items)));
-})();
+render({write: console.log}, AsyncList([1, 2, 3]));
