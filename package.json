@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run cjs && npm run test",
     "cjs": "ascjs esm cjs",
-    "test": "node test/index.js"
+    "test": "node test/index.js && node test/async.js"
   },
   "keywords": [
     "uland",
@@ -25,11 +25,15 @@
       "import": "./esm/index.js",
       "default": "./cjs/index.js"
     },
+    "./async": {
+      "import": "./esm/async.js",
+      "default": "./cjs/async.js"
+    },
     "./package.json": "./package.json"
   },
   "dependencies": {
-    "uhooks-nofx": "^0.1.1",
-    "uhtml-ssr": "^0.1.0"
+    "uhooks-nofx": "^0.2.0",
+    "uhtml-ssr": "^0.1.1"
   },
   "repository": {
     "type": "git",

@@ -8,6 +8,8 @@
 
 It allows using same components code on the client and the server, producing *html* or *svg* streams.
 
+This module also exports `uland-ssr/async`, which is based on `uland-nofx/async`.
+
 
 ### 📣 Community Announcement
 
