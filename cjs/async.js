@@ -1,7 +1,34 @@
 'use strict';
 const {hooked} = require('uhooks-nofx/async');
 
-const {render: $render} = require('uhtml-ssr');
+const {
+  render: $render,
+  html: $html,
+  svg: $svg
+} = require('uhtml-ssr');
+
+const {isArray} = Array;
+
+const createHelper = $tag => {
+  const tag = async (template, ...values) =>
+                $tag(template, ...(await unroll(values)));
+  tag.for = () => tag;
+  tag.node = tag;
+  return tag;
+};
+
+const unroll = async values => {
+  for (let {length} = values, i = 0; i < length; i++) {
+    const value = await values[i];
+    values[i] = isArray(value) ? await unroll(value) : value;
+  }
+  return values;
+};
+
+const html = createHelper($html);
+exports.html = html;
+const svg = createHelper($svg);
+exports.svg = svg;
 
 const render = async (where, what) => {
   const value = await (typeof what === 'function' ? what() : what);
@@ -13,11 +40,6 @@ function Component(f) {
   return hooked(f);
 }
 exports.Component = Component;
-
-(m => {
-  exports.html = m.html;
-  exports.svg = m.svg;
-})(require('uhtml-ssr'));
 
 (m => {
   exports.createContext = m.createContext;
