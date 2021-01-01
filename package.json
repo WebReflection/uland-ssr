@@ -1,6 +1,6 @@
 {
   "name": "uland-ssr",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Same uland API for SSR / DOM-less environments",
   "main": "./cjs/index.js",
   "scripts": {
