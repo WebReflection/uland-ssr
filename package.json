@@ -16,7 +16,7 @@
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
-    "ascjs": "^4.0.3"
+    "ascjs": "^5.0.1"
   },
   "module": "./esm/index.js",
   "type": "module",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "uhooks-nofx": "^0.2.0",
-    "uhtml-ssr": "^0.2.0"
+    "uhtml-ssr": "^0.3.0"
   },
   "repository": {
     "type": "git",
