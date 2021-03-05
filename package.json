@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "uhooks-nofx": "^0.2.0",
-    "uhtml-ssr": "^0.4.3"
+    "uhtml-ssr": "^0.5.0"
   },
   "repository": {
     "type": "git",
