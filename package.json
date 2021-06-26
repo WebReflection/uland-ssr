@@ -4,8 +4,9 @@
   "description": "Same uland API for SSR / DOM-less environments",
   "main": "./cjs/index.js",
   "scripts": {
-    "build": "npm run cjs && npm run test",
+    "build": "npm run async && npm run cjs && npm run test",
     "cjs": "ascjs esm cjs",
+    "async": "cp esm/index.js esm/async.js && sed -i.bck 's/uhtml-ssr/uhtml-ssr\\/async/; s/\\/\\*async\\*\\//async/; s/\\/\\*await\\*\\//await/' esm/async.js && rm -rf  esm/async.js.bck",
     "test": "node test/index.js && node test/async.js"
   },
   "keywords": [
@@ -32,6 +33,7 @@
     "./package.json": "./package.json"
   },
   "dependencies": {
+    "uarray": "^1.0.0",
     "uhooks-nofx": "^0.2.0",
     "uhtml-ssr": "^0.5.0"
   },
